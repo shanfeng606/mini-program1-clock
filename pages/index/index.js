@@ -120,7 +120,7 @@ Page({
         ctx.arc(400/_this.data.rate/2,400/_this.data.rate/2,400/_this.data.rate/2-2*lineWidth,1.5*Math.PI,step);
         ctx.stroke();
         ctx.draw();
-
+        
       }else{
         // 将完成的数据记录到日志
         var logs=wx.getStorageSync('logs')||[];
