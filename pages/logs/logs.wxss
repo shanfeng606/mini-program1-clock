@@ -1,0 +1,62 @@
+.sum{
+  display: flex;
+  flex-wrap: wrap;
+  width: 750rpx;
+  height: 350rpx;
+  border-bottom:10rpx solid #eee;
+}
+
+.sum-item{
+  width: 375rpx;
+  height: 160rpx;
+  text-align: center;
+}
+
+.sum-item-title{
+  height: 120rpx;
+  line-height: 120rpx;
+  font-size: 30rpx;
+  color: #6b747e;
+}
+.sum-item-val{
+  height: 40rpx;
+  line-height:40rpx;
+  color: #e7624f;
+}
+
+/* 统计细节样式  */
+.active{
+  color: #e7624f;
+}
+.detail{
+  width: 700rpx;
+  margin: 0 auto;
+}
+
+.detail-title{
+  display: flex;
+  height: 60rpx;
+  line-height: 60rpx;
+}
+.detail-text{
+  font-size: 30rpx;
+  flex:1
+}
+.detail-type{
+  font-size: 25rpx;
+  flex:1;
+  text-align: right;
+}
+.detail-type text{
+  padding-left:10rpx;
+}
+
+.list-item{
+  display: flex;
+  justify-content: space-around;
+}
+/* .list-item>view{
+  width: 200rpx;
+  font-size: 25rpx;
+  text-align: center;
+} */

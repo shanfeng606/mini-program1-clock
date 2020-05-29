@@ -1,0 +1,103 @@
+/**index.wxss**/
+
+.slider{
+  width: 650rpx;
+  margin: 50rpx auto;
+}
+/* 任务选择提示 */
+.task{
+  height:120rpx;
+  margin:70rpx auto;
+  text-align: center;
+}
+.task-title{
+  font-size: 35rpx;
+  height: 70rpx;
+  line-height:70rpx;
+}
+.task-detail{
+  font-size: 30rpx;
+  height: 50rpx;
+  line-height:50rpx;
+  color: #999;
+}
+/* 任务选项 */
+.task-cate{
+  margin: 50rpx auto;
+  width:660rpx;
+  display:flex; 
+  flex-wrap: wrap;
+}
+.cate-item{
+  display: flex;
+  width:33.333%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin:25rpx 0;
+}
+.cate-item-icon image{
+  height:60rpx;
+  width: 60rpx;
+} 
+.cate-text-active{
+  color:#e7624f; 
+}
+
+.start{ 
+  margin: 160rpx auto;
+  width: 180rpx;
+  height: 180rpx;
+  border:2rpx solid #E7624f;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 180rpx;
+}
+page{
+  height: 100%;
+}
+/* 时钟页面 */
+.clock{
+  height: 100%;
+  background-color: #E7624f;
+  overflow: hidden;
+}
+
+.progress{
+  width: 400rpx;
+  height: 400rpx;
+  /* background-color: orange; */
+  margin: 140rpx auto;
+  position: relative;
+}
+.progress-bg,.progress-active{
+  width: 400rpx;
+  height: 400rpx;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.progress-text{
+  width: 160rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  font-size: 35rpx;
+  color: #fff;
+  text-align: center;
+  position: absolute;
+  left:50%;
+  top:50%;
+  margin-left: -80rpx;
+  margin-top: -30rpx;
+}
+/* 按钮  */
+.okBtn,.pauseBtn,.continueBtn,.cancelBtn{
+   width: 250rpx;
+   height: 60rpx;
+   line-height: 60rpx;
+   text-align: center;
+   color: #fff;
+   border: 3rpx solid #fff;
+   border-radius: 20rpx;
+   margin:0 auto 20rpx auto ;
+}

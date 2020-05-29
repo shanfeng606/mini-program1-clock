@@ -1,0 +1,29 @@
+<!--logs.wxml-->
+<view class="sum">
+  <view class="sum-item" wx:for="{{sum}}">
+    <view class="sum-item-title">{{item.title}}</view>
+    <view class="sum-item-val">{{item.val}}</view>
+  </view>
+</view>
+
+<view class="detail">
+  <view class="detail-title">
+    <view class="detail-text">分类统计</view>
+    <view class="detail-type">
+      <text class="{{actionIndex==0?'active':''}}" data-index="0" bindtap="changeType">今日</text>
+      <text class="{{actionIndex==1?'active':''}}" data-index="1" bindtap="changeType">历史</text>
+    </view>
+  </view>
+
+  <view class="detail-list" wx:if="{{list.length>0}}">
+    <view class="list-item" wx:for="{{list}}">
+      <view class="list-item-date">{{item.date}}</view>
+      <view class="list-item-cate">{{cateArr[item.cate].text}}</view>
+      <view class="list-item-time">{{item.time}}</view> 
+    </view>
+  </view>
+
+  <view class="detail-list" wx:if="{{list.length==0}}">
+  暂无数据
+  </view>
+</view>
