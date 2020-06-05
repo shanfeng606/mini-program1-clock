@@ -5,7 +5,7 @@ const util = require('../../utils/util.js')
 
 Page({
   data: {
-    time:'5',
+    time:'30',
     rate:'',
     clockShow:false,
     mTime:0,
@@ -19,14 +19,14 @@ Page({
         icon:'study',
         text:'学习'
       },{
-        icon:'think',
-        text:'思考'
+        icon:'alert',
+        text:'提醒'
       },{
         icon:'write',
         text:'写作'
       },{
-        icon:'sport',
-        text:'运动'
+        icon:'amuse',
+        text:'娱乐'
       },{
         icon:'read',
         text:'阅读'
