@@ -5,7 +5,7 @@ Page({
   data: {
     logs: [],
     dayList: [],  //今日
-    list: [],     //累计
+    list: [],     //将今日或累计赋给这个数组，在wxml中调用数据生成列表
     actionIndex: 0,
     sum: [{
         title: '今日番茄次数',
@@ -52,7 +52,7 @@ Page({
     })
     var logs = wx.getStorageSync('logs')||[];
     // 为什么logs里面会有一串数字，哪里来的？
-    logs.pop();
+    // logs.pop();
     console.log(logs)
     var day = 0; //今日番茄次数
     var total = logs.length; //累计番茄次数
@@ -62,6 +62,7 @@ Page({
 
     if (logs.length > 0) {
       for (var i = 0; i < logs.length; i++) {
+        //当之前保存的时间戳等于当前日期，计算当日的数据
         if ((logs[i].date!==undefined) && logs[i].date.substr(0, 10) == util.formatTime(new Date).substr(0, 10)) {
           // if(logs[i].date==util.formatTime(new Date)){
           // console.log(0)
@@ -73,6 +74,7 @@ Page({
             list: dayList
           })
         }
+        //统计所有的计时数据
         if (logs[i].date!==undefined){
           totalTime = totalTime + parseInt(logs[i].time)
         }  

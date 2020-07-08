@@ -5,7 +5,7 @@ const util = require('../../utils/util.js')
 
 Page({
   data: {
-    time:'5',
+    time:'30',
     rate:'',
     clockShow:false,
     mTime:0,
@@ -19,14 +19,14 @@ Page({
         icon:'study',
         text:'学习'
       },{
-        icon:'think',
-        text:'思考'
+        icon:'alert',
+        text:'提醒'
       },{
         icon:'write',
         text:'写作'
       },{
-        icon:'sport',
-        text:'运动'
+        icon:'amuse',
+        text:'娱乐'
       },{
         icon:'read',
         text:'阅读'
@@ -38,11 +38,11 @@ Page({
     continueCancelShow:false
   },
   //事件处理函数
-  bindViewTap: function() {
-    wx.navigateTo({
-      url: '../logs/logs'
-    })
-  },
+  // bindViewTap: function() {
+  //   wx.navigateTo({
+  //     url: '../logs/logs'
+  //   })
+  // },
   onLoad: function () {
     //系统设备信息
     var res=wx.getSystemInfoSync();
@@ -101,7 +101,6 @@ Page({
       var step=_this.data.mTime/(_this.data.time*60*1000)*2*Math.PI+1.5*Math.PI
       
       if(step<3.5*Math.PI){
-
         if(currentTime % 1000){
           var time_all=currentTime / 1000;  //获得倒计时文字总秒数
           var time_m=(parseInt(time_all / 60)>=10)?parseInt(time_all / 60):('0'+parseInt(time_all / 60))                 //获得倒计时文字分钟
@@ -110,7 +109,7 @@ Page({
             timeStr:time_m+':'+time_s
           })
         }
-
+        //开始绘制动圆，每100ms绘制一次
         var lineWidth=6/_this.data.rate; //px
         var ctx=wx.createCanvasContext('progress-active');
         ctx.setLineWidth(lineWidth);
@@ -120,7 +119,6 @@ Page({
         ctx.arc(400/_this.data.rate/2,400/_this.data.rate/2,400/_this.data.rate/2-2*lineWidth,1.5*Math.PI,step);
         ctx.stroke();
         ctx.draw();
-        
       }else{
         // 将完成的数据记录到日志
         var logs=wx.getStorageSync('logs')||[];
@@ -131,16 +129,16 @@ Page({
         });
         // console.log(logs); 
         wx.setStorageSync('logs', logs)//把数据加到缓存
-
         _this.setData({
-          timeStr:"00:00",
+          timeStr:"00:00",//这部分好像多余？
           okShow:true,
           pauseShow:false,
           continueCancelShow:false
         })
         clearInterval(timer);
       }
-    }, 100);  
+    }, 100); 
+    //暴露计时器，供其他函数调用 
     this.setData({
       timer:timer
     })

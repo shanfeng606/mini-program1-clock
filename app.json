@@ -1,28 +1,36 @@
 {
-  "pages":[
+  "pages": [
+    "pages/translate/translate",
     "pages/index/index",
-    "pages/logs/logs"
+    "pages/logs/logs",
+    "pages/change/change"
   ],
-  "window":{
-    "backgroundTextStyle":"light",
+  "window": {
+    "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#e7624f",
     "navigationBarTitleText": "SYF时钟",
-    "navigationBarTextStyle":"white"
+    "navigationBarTextStyle": "white"
   },
   "tabBar": {
-    "selectedColor":"#000",
+    "selectedColor": "#000",
     "list": [
       {
         "pagePath": "pages/index/index",
         "text": "计时",
-        "iconPath":"./images/jishi2.png",
-        "selectedIconPath":"./images/jishi.png"
+        "iconPath": "./images/jishi2.png",
+        "selectedIconPath": "./images/jishi.png"
       },
       {
         "pagePath": "pages/logs/logs",
         "text": "统计",
-        "iconPath":"./images/tongji2.png",
-        "selectedIconPath":"./images/tongji.png"
+        "iconPath": "./images/tongji2.png",
+        "selectedIconPath": "./images/tongji.png"
+      },
+      {
+        "pagePath": "pages/translate/translate",
+        "text": "翻译",
+        "iconPath": "./images/tongji2.png",
+        "selectedIconPath": "./images/tongji.png"
       }
     ]
   },
