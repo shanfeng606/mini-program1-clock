@@ -29,8 +29,8 @@
       {
         "pagePath": "pages/translate/translate",
         "text": "翻译",
-        "iconPath": "./images/tongji2.png",
-        "selectedIconPath": "./images/tongji.png"
+        "iconPath": "./images/fanyi2.png",
+        "selectedIconPath": "./images/fanyi.png"
       }
     ]
   },
