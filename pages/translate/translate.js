@@ -12,6 +12,11 @@ Page({
   //清除翻译内容与结果
   onTapClose:function(){
     this.setData({query:'',result:[]})
+    wx.showToast({
+      title: '内容已清空',
+      icon: 'success',
+      duration: 1200
+    })
   },
   onConfirm: function () {
     console.log(23)
