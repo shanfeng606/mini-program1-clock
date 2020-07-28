@@ -20,16 +20,25 @@ page{
   right: 12rpx;
   top: 20rpx;
   z-index: 100;
-  font-size: 40rpx;
+  font-size: 35rpx;
   color: #888;
+  /* background-color: aqua; */
 }
 
-/* 输出框内容------------------------------- */
 .textarea-wrap{
-  width:100%;
-  height:0%;
-  background-color: aqua;
+  box-sizing: border-box;
+  height: 100%;
+  white-space: normal;
+  /* background-color: aqua; */
 }
+.textarea-wrap textarea{
+  height: 100%;
+  /* background-color: orange; */
+  width:91%;
+}
+
+
+/* 输出框内容------------------------------- */
 .text-title{
   display:flex;
   justify-content: center;
@@ -44,8 +53,13 @@ page{
 }
 .text-area{
   color: #fff;
-  margin-top: 10rpx;
-  width:100%; 
+  margin-top: 10rpx; 
+  white-space: normal;
   background-color: #e7624f;
+}
+.text-result{
+  padding:20rpx 10rpx;
+  /* background-color: aqua; */
+  word-break: break-all;
 }
 

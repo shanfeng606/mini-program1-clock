@@ -53,7 +53,7 @@ Page({
     var logs = wx.getStorageSync('logs')||[];
     // 为什么logs里面会有一串数字，哪里来的？
     // logs.pop();
-    console.log(logs)
+    // console.log(logs)
     var day = 0; //今日番茄次数
     var total = logs.length; //累计番茄次数
     var dayTime = 0; //今日时长

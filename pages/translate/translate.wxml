@@ -6,9 +6,9 @@
 	</view> -->
 	<!-- 翻译原文 -->
 	<view class="input-area">
-		<text class="iconfont icon-close"  bindtap='onTapClose'>清除</text>
+		<text class="iconfont icon-close" bindtap='onTapClose'>清除</text>
 		<view class="textarea-wrap">
-			<textarea placeholder='请输入要翻译的文本' placeholder-style='color: #8995a1' bindinput='onInput' bindblur='onConfirm' value="{{query}}"></textarea>
+			<textarea placeholder='请输入要翻译的文本' placeholder-style='color: #8995a1' bindinput='onInput' bindconfirm='onConfirm' bindblur='onConfirm' value="{{query}}"></textarea>
 		</view>
 	</view>
 	<!-- 翻译结果 -->
