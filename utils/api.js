@@ -10,7 +10,7 @@ function translate(q, { from = 'auto', to = 'auto' } = { from: 'auto', to: 'auto
     let salt =Date.now() //随机码 
     let sign = md5(`${appid}${q}${salt}${key}`)  //生成签名sign：拼接 MD5进行加密
     wx.request({
-      url: 'http://api.fanyi.baidu.com/api/trans/vip/translate',
+      url: 'https://fanyi-api.baidu.com/api/trans/vip/translate',
       data: {
         q,  //待翻译文本
         from,  //待翻译的原始语言
